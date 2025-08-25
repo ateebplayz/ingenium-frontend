@@ -64,19 +64,19 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-start items-start bg-black font-primary">
       <div className="min-h-screen w-full bg-cover bg-[url(/home/Hero.png)] flex p-16 flex-col justify-center items-center">
-        <div className="absolute top-12 left-8 flex flex-col justify-start items-start">
-          <h1 className="text-[150px] leading-32 font-black space-x-0 font-secondary">
+        <div className="lg:absolute lg:top-12 lg:left-8 flex flex-col justify-start items-start">
+          <h1 className="text-7xl lg:text-[150px] leading-16 lg:leading-32 font-black w-full text-center lg:text-start space-x-0 font-secondary">
             INGENIUM&lsquo;25
           </h1>
-          <h1 className="text-[117px] leading-24 font-black text-primary-foreground space-x-0 font-secondary">
+          <h1 className="text-5xl lg:text-[117px] leading-12 lg:leading-24 font-black w-full text-center lg:text-start text-primary-foreground space-x-0 font-secondary">
             NOVEMBER 7,8,9
           </h1>
         </div>
-        <div className="absolute top-12 right-8 flex flex-col justify-start items-start">
+        <div className="lg:absolute lg:top-12 lg:right-8 flex flex-col justify-start items-start">
           <Button>Register Now</Button>
         </div>
         <div className="absolute bottom-8 left-8 right-8 flex flex-col gap-4 justify-start items-start flex-col">
-          <div className="flex flex-row w-full items-end justify-between">
+          <div className="hidden lg:flex flex-row w-full items-end justify-between">
             <h1 className="w-1/2 font-primary text-xl font-medium">
               Three days of science, tech, engineering, and creativity. From
               cracking ciphers to building AI startups, Ingenium unites brilliant
@@ -90,7 +90,7 @@ export default function Home() {
 
       {/* Intro */}
       <div className="bg-background w-full flex justify-start items-start p-8">
-        <h1 className="text-5xl font-medium w-5/6">
+        <h1 className="w-full text-3xl lg:text-5xl font-medium lg:w-5/6">
           Ingenium is a 3-day competition bringing together students and
           innovators from diverse fields. Across categories like{" "}
           <span className="text-primary-foreground">
@@ -103,13 +103,13 @@ export default function Home() {
       </div>
 
       {/* Mid section */}
-      <div className="bg-background w-full flex justify-between items-stretch p-8">
-        <div className="w-1/2 flex flex-row justify-end gap-12 px-16 ">
+      <div className="bg-background w-full px-8 flex justify-center lg:justify-between items-center lg:items-stretch lg:flex-row flex-col lg:flex-colp-8">
+        <div className="w-full lg:w-1/2 flex justify-end gap-12 lg:px-16 ">
           <img src={"/home/Pic-1.png"} className={'w-5/12 h-auto rounded-3xl'}/>
           <img src={"/home/Pic-2.png"} className={'w-5/12 h-auto rounded-3xl'}/>
         </div>
-        <div className="w-1/2 flex flex-row justify-center items-center gap-8">
-          <h1 className="text-3xl">
+        <div className="w-full lg:w-1/2 flex flex-row justify-center items-center gap-8">
+          <h1 className="text-xl lg:text-3xl text-center lg:text-start mt-4 lg:mt-0">
             Ingenium is a high-energy arena of competitions designed to inspire
             innovation and teamwork. Over three days, participants face unique
             challenges that blend knowledge, creativity, and strategy, making every
@@ -120,11 +120,11 @@ export default function Home() {
 
       {/* Categories */}
       <div className="bg-background w-full flex flex-col justify-start items-start p-8">
-        <h1 className="text-7xl font-medium w-full font-secondary">
+        <h1 className="text-5xl lg:text-7xl font-medium w-full font-secondary">
           From science to storytelling, each category offers a unique test of
           skill and creativity.
         </h1>
-        <h1 className="text-7xl font-medium w-full font-secondary text-end text-primary-foreground">
+        <h1 className="text-5xl lg:text-7xl font-medium w-full font-secondary text-end text-primary-foreground">
           From cracking codes to building bold ideas, Ingenium’s categories cover
           a spectrum of challenges that push participants to think fast, work
           smart, and bring their best to the table.
@@ -134,7 +134,7 @@ export default function Home() {
 
       {/* Selector Grid */}
       <div className="bg-background w-full flex flex-col justify-start items-start p-8">
-        <h1 className="w-full font-secondary text-9xl font-black text-center">
+        <h1 className="w-full font-secondary text-5xl lg:text-9xl font-black text-center">
           THE <span className="text-primary-foreground">CATEGORIES</span>.
         </h1>
         <h1 className="w-full font-secondary text-3xl font-black text-center">
@@ -148,64 +148,64 @@ export default function Home() {
         <div
           className="flex flex-wrap justify-center items-center gap-4 w-full mt-12"
         >
-          <div className="flex justify-start items-start gap-4 flex-col p-4 w-[45%] bg-primary-foreground/10">
-            <h1 className="font-secondary text-4xl font-black text-primary-foreground">
+          <div className="flex justify-start items-start gap-4 flex-col p-4 w-full lg:w-[45%] bg-primary-foreground/10">
+            <h1 className="font-secondary text-4xl font-black text-primary-foreground text-center lg:text-start w-full">
               COMPULSORY <span className="text-xl text-white">Choose Upto Two</span>
             </h1>
-            <div className="flex flex-row gap-4 justify-start items-stretch">
+            <div className="flex flex-row gap-4 flex-wrap justify-start items-stretch">
               <div
                 onClick={() => setSelected(selected === "GENESIS" ? null : "GENESIS")}
-                className="flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
-                <h1 className="font-black text-primary-foreground font-secondary -mb-2 text-xl">
+                className="w-full lg:w-fit flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
+                <h1 className="font-black text-center text-primary-foreground font-secondary -mb-2 text-xl">
                   SCIENCE
                 </h1>
                 <h1
-                  className="font-secondary font-black text-3xl">GENESIS</h1>
+                  className="font-secondary text-center font-black text-3xl">GENESIS</h1>
               </div>
               <div
                 onClick={() => setSelected(selected === "PROOF PERSUIT" ? null : "PROOF PERSUIT")}
-                className="flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
-                <h1 className="font-black text-primary-foreground font-secondary -mb-2 text-xl">
+                className="w-full lg:w-fit flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
+                <h1 className="font-black text-center text-primary-foreground font-secondary -mb-2 text-xl">
                   RESEARCH
                 </h1>
                 <h1
-                  className="font-secondary font-black text-3xl">PROOF PERSUIT</h1>
+                  className="font-secondary text-center font-black text-3xl">PROOF PERSUIT</h1>
               </div>
               <div
                 onClick={() => setSelected(selected === "SILICON 4D41" ? null : "SILICON 4D41")}
-                className="flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
-                <h1 className="font-black text-primary-foreground font-secondary -mb-2 text-xl">
+                className="w-full lg:w-fit flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
+                <h1 className="font-black text-center text-primary-foreground font-secondary -mb-2 text-xl">
                   COMPUTER SCIENCE
                 </h1>
                 <h1
-                  className="font-secondary font-black text-3xl">SILICON 4D41</h1>
+                  className="font-secondary text-center font-black text-3xl">SILICON 4D41</h1>
               </div>
             </div>
           </div>
-          <div className="flex justify-start items-start gap-4 flex-col p-4 w-[45%] bg-primary-foreground/10">
-            <h1 className="font-secondary text-4xl font-black text-primary-foreground">
+          <div className="flex justify-start items-start gap-4 flex-col p-4 w-full lg:w-[45%] bg-primary-foreground/10">
+            <h1 className="font-secondary text-4xl font-black text-primary-foreground text-center lg:text-start w-full">
               APEX <span className="text-xl text-white">Choose One</span>
             </h1>
-            <div className="flex flex-row gap-4 justify-start items-stretch">
+            <div className="flex flex-row gap-4 flex-wrap justify-start items-stretch">
               <div
                 onClick={() => setSelected(selected === "CIVIL SYMPOSIUM" ? null : "CIVIL SYMPOSIUM")}
-                className="flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
-                <h1 className="font-black text-primary-foreground font-secondary -mb-2 text-xl">
+                className="w-full lg:w-fit flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
+                <h1 className="font-black text-center text-primary-foreground font-secondary -mb-2 text-xl">
                   ENGINEERING
                 </h1>
                 <h1
-                  className="font-secondary font-black text-3xl">
+                  className="font-secondary text-center font-black text-3xl">
                   CIVIL SYMPOSIUM
                 </h1>
               </div>
               <div
                 onClick={() => setSelected(selected === "CAELUM COGNITO" ? null : "CAELUM COGNITO")}
-                className="flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
-                <h1 className="font-black text-primary-foreground font-secondary -mb-2 text-xl">
+                className="w-full lg:w-fit flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
+                <h1 className="font-black text-center text-primary-foreground font-secondary -mb-2 text-xl">
                   ASTRONOMY
                 </h1>
                 <h1
-                  className="font-secondary font-black text-3xl">
+                  className="font-secondary text-center font-black text-3xl">
                   CAELUM COGNITO
                 </h1>
               </div>
@@ -213,44 +213,44 @@ export default function Home() {
           </div>
 
           {/* MATRIX */}
-          <div className="flex justify-start items-start gap-4 flex-col p-4 w-[45%] bg-primary-foreground/10">
-            <h1 className="font-secondary text-4xl font-black text-primary-foreground">
+          <div className="flex justify-start items-start gap-4 flex-col p-4 w-full lg:w-[45%] bg-primary-foreground/10">
+            <h1 className="font-secondary text-4xl font-black text-primary-foreground text-center lg:text-start w-full">
               MATRIX <span className="text-xl text-white">Choose One</span>
             </h1>
-            <div className="flex flex-row gap-4 justify-start items-stretch">
+            <div className="flex flex-row gap-4 justify-start flex-wrap items-stretch">
               <div
                 onClick={() => setSelected(selected === "AXIOM OF CHOICE" ? null : "AXIOM OF CHOICE")}
-                className="flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
-                <h1 className="font-black text-primary-foreground font-secondary -mb-2 text-xl">
+                className="w-full lg:w-fit flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
+                <h1 className="font-black text-center text-primary-foreground font-secondary -mb-2 text-xl">
                   MATHEMATICS
                 </h1>
                 <h1
-                  className="font-secondary font-black text-3xl">
+                  className="font-secondary text-center font-black text-3xl">
                   AXIOM OF CHOICE
                 </h1>
               </div>
               <div
                 onClick={() => setSelected(selected === "PERMUTATION PARADOX" ? null : "PERMUTATION PARADOX")}
-                className="flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
-                <h1 className="font-black text-primary-foreground font-secondary -mb-2 text-xl">
+                className="w-full lg:w-fit flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
+                <h1 className="font-black text-center text-primary-foreground font-secondary -mb-2 text-xl">
                   CRYPTOGRAPHY
                 </h1>
                 <h1
-                  className="font-secondary font-black text-3xl">
+                  className="font-secondary text-center font-black text-3xl">
                   PERMUTATION PARADOX
                 </h1>
               </div>
             </div>
           </div>
-          <div className="flex justify-start items-start gap-4 flex-col p-4 w-[45%] bg-primary-foreground/10">
-            <h1 className="font-secondary text-4xl font-black text-primary-foreground">
+          <div className="flex justify-start items-start gap-4 flex-col p-4 w-full lg:w-[45%] bg-primary-foreground/10">
+            <h1 className="font-secondary text-4xl font-black text-primary-foreground text-center lg:text-start w-full">
               UNDERWORLD <span className="text-xl text-white">Choose One</span>
             </h1>
-            <div className="flex flex-row gap-4 justify-start items-stretch">
+            <div className="flex flex-row gap-4 flex-wrap justify-start items-stretch">
               <div
                 onClick={() => setSelected(selected === "THE LAST SIN" ? null : "THE LAST SIN")}
-                className="flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
-                <h1 className="font-black text-primary-foreground font-secondary -mb-2 text-xl">
+                className="w-full lg:w-fit flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
+                <h1 className="font-black text-center text-primary-foreground font-secondary -mb-2 text-xl">
                   CRIME
                 </h1>
                 <h1
@@ -258,8 +258,8 @@ export default function Home() {
               </div>
               <div
                 onClick={() => setSelected(selected === "THE QUEST OF EREBOR" ? null : "THE QUEST OF EREBOR")}
-                className="flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
-                <h1 className="font-black text-primary-foreground font-secondary -mb-2 text-xl">
+                className="w-full lg:w-fit flex flex-col justify-center items-center border border-primary-foreground text-xl p-2 px-8 font-medium transition duration-500 hover:opacity-50 cursor-pointer">
+                <h1 className="font-black text-center text-primary-foreground font-secondary -mb-2 text-xl">
                   FANDOM
                 </h1>
                 <h1
@@ -281,14 +281,14 @@ export default function Home() {
               transition={{duration: 0.4}}
               className="mt-12 w-screen -ml-8 bg-cover bg-[url(/home/Category.png)] p-8 rounded-2xl shadow-xl"
             >
-              <h2 className="text-9xl font-secondary font-bold text-primary mb-4">
+              <h2 className="text-9xl text-center lg:text-start font-secondary font-bold text-primary mb-4">
                 {categories[selected].title}
               </h2>
               <h2
-                className="text-7xl font-secondary font-bold text-stroke-[0.5px] -mt-8 text-transparent text-stroke-primary-foreground mb-4">
+                className="text-7xl font-secondary text-center lg:text-start font-bold text-stroke-[0.5px] -mt-8 text-transparent text-stroke-primary-foreground mb-4">
                 {categories[selected].subtitle}
               </h2>
-              <p className="text-2xl text-white leading-relaxed">
+              <p className="text-lg lg:text-2xl text-center lg:text-start text-white leading-relaxed">
                 {categories[selected].desc}
               </p>
             </motion.div>
@@ -299,60 +299,61 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col justify-start items-start bg-black w-full font-primary py-20 px-16">
-        <h1 className="w-full font-secondary text-7xl font-black text-center mb-12">
+        <h1 className="w-full font-secondary text-5xl lg:text-7xl font-black text-center mb-12">
           Registration &amp; <span className="text-primary-foreground">Pricing</span>
         </h1>
 
         <div className="flex flex-col lg:flex-row gap-8 justify-center items-stretch w-full">
           <div
-            className="flex flex-row min-h-[250px] justify-between bg-neutral-900 rounded-2xl p-10 w-full lg:w-1/2 border border-primary-foreground shadow-xl">
-            <div className={'flex justify-start relative items-start flex-col'}>
-              <p className="text-4xl font-secondary font-bold text-pink-500">
-                PKR 3500{" "}
+            className="flex flex-col lg:flex-row min-h-[250px] justify-between bg-neutral-900 rounded-2xl p-10 w-full lg:w-1/2 border border-primary-foreground shadow-xl">
+            <div className={'flex justify-start relative text-center lg:text-start items-start flex-col'}>
+              <p className="text-4xl leading-4 lg:leading-8 mt-2 lg:mt-0 font-secondary font-bold text-primary-foreground">
+                PKR 4000{" "}
                 <span className="text-xl text-white">
                   per delegate
                 </span>
               </p>
-              <p className="text-4xl font-secondary font-bold text-pink-500">
+              <p className="text-4xl leading-4 lg:leading-8 mt-2 lg:mt-0 font-secondary font-bold text-primary-foreground">
                 PKR 4500{" "}
                 <span className="text-xl text-white">
                   per delegation
                 </span>
               </p>
-              <div className={'absolute bottom-0 left-0'}>
+              <div className={'lg:absolute lg:bottom-0 lg:left-0 flex justify-center items-center w-full lg:w-fit mt-2 lg:mt-0'}>
                 <Button className={''}>
                   Register Now
                 </Button>
               </div>
             </div>
-            <div className={'flex justify-end items-end flex-col'}>
+            <div className={'flex justify-center items-center lg:justify-end lg:items-end flex-col mt-4 lg:mt-0'}>
               <h2 className="text-sm text-neutral-500">Valid Until 1st November</h2>
-              <h2 className="text-6xl font-secondary font-bold text-primary-foreground">EARLY BIRD</h2>
+              <h2 className="text-4xl lg:text-6xl text-center font-secondary font-bold text-primary-foreground">EARLY BIRD</h2>
             </div>
           </div>
           <div
-            className="flex flex-row min-h-[250px] justify-between bg-neutral-900 rounded-2xl p-10 w-full lg:w-1/2 border border-neutral-700 shadow-xl">
-            <div className={'flex justify-start relative items-start flex-col'}>
-              <p className="text-4xl font-secondary font-bold text-pink-500">
-                PKR 3500{" "}
+            className="flex flex-col lg:flex-row min-h-[250px] justify-between bg-neutral-900 rounded-2xl p-10 w-full lg:w-1/2 border border-neutral-700 shadow-xl">
+            <div className={'flex justify-start relative text-center lg:text-start items-start flex-col'}>
+              <p className="text-4xl leading-4 lg:leading-8 mt-2 lg:mt-0 font-secondary font-bold text-primary-foreground">
+                PKR 3000{" "}
                 <span className="text-xl text-white">
                   per delegate
                 </span>
               </p>
-              <p className="text-4xl font-secondary font-bold text-pink-500">
-                PKR 4500{" "}
+              <p className="text-4xl leading-4 lg:leading-8 mt-2 lg:mt-0 font-secondary font-bold text-primary-foreground">
+                PKR 3500{" "}
                 <span className="text-xl text-white">
                   per delegation
                 </span>
               </p>
-              <div className={'absolute bottom-0 left-0'}>
+              <div
+                className={'lg:absolute lg:bottom-0 lg:left-0 flex justify-center items-center w-full lg:w-fit mt-2 lg:mt-0'}>
                 <Button className={''}>
                   Register Now
                 </Button>
               </div>
             </div>
-            <div className={'flex justify-end items-end flex-col'}>
-              <h2 className="text-6xl font-secondary font-bold text-white">STANDARD</h2>
+            <div className={'flex justify-center items-center lg:justify-end lg:items-end flex-col mt-4 lg:mt-0'}>
+              <h2 className="text-4xl lg:text-6xl text-center font-secondary font-bold text-primary-foreground">STANDARD</h2>
             </div>
           </div>
         </div>
@@ -360,18 +361,18 @@ export default function Home() {
       </div>
 
       <div className="bg-[url(/home/Expand.png)] bg-cover w-full flex justify-start items-start flex-col p-8 py-16">
-        <h1 className={'text-7xl w-5/6 font-secondary font-bold mb-4'}>Get the complete <span
+        <h1 className={'text-5xl lg:text-7xl w-ful llg:w-5/6 font-secondary font-bold mb-4'}>Get the complete <span
           className={'text-primary-foreground'}>Ingenium&lsquo;25</span> guide with all event details, rules and tips.
           Click below to download and start preparing for the ultimate competition.</h1>
         <Button className={''}>
           Download Now
         </Button>
       </div>
-      <div className="bg-background w-full flex justify-end items-end flex-col relative pt-12">
-        <h1 className="font-bold font-secondary text-center w-full px-6 text-3xl text-start mb-0 text-primary-foreground">
+      <div className="bg-background w-full flex justify-end items-end flex-col relative py-8 lg:pt-12 lg:pb-0 px-8 lg:px-0">
+        <h1 className="font-bold font-secondary text-center lg:text-start w-full lg:px-6 text-2xl lg:text-3xl mb-0 text-primary-foreground">
           INTERNATIONAL SCHOOL LAHORE PRESENTS
         </h1>
-        <h1 className="font-bold font-secondary text-center w-full text-[25vw] leading-[20vw]">
+        <h1 className="font-bold font-secondary text-center w-full text-7xl lg:text-[25vw] lg:leading-[20vw]">
           INGENIUM<span className={'text-primary-foreground'}>&lsquo;25</span>
         </h1>
       </div>
