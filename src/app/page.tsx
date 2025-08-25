@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col justify-start items-start bg-black font-primary">
-      <div className="min-h-screen w-full bg-[url(/home/Hero.png)] flex p-16 flex-col justify-center items-center">
+      <div className="min-h-screen w-full bg-cover bg-[url(/home/Hero.png)] flex p-16 flex-col justify-center items-center">
         <div className="absolute top-12 left-8 flex flex-col justify-start items-start">
           <h1 className="text-[150px] leading-32 font-black space-x-0 font-secondary">
             INGENIUM&lsquo;25
@@ -279,7 +279,7 @@ export default function Home() {
               animate={{opacity: 1, y: 0}}
               exit={{opacity: 0, y: 30}}
               transition={{duration: 0.4}}
-              className="mt-12 w-screen -ml-8 bg-[url(/home/Category.png)] p-8 rounded-2xl shadow-xl"
+              className="mt-12 w-screen -ml-8 bg-cover bg-[url(/home/Category.png)] p-8 rounded-2xl shadow-xl"
             >
               <h2 className="text-9xl font-secondary font-bold text-primary mb-4">
                 {categories[selected].title}
@@ -359,7 +359,7 @@ export default function Home() {
         <img className="w-full mt-24" src={"/home/Bar.png"}/>
       </div>
 
-      <div className="bg-[url(/home/Expand.png)] w-full flex justify-start items-start flex-col p-8 py-16">
+      <div className="bg-[url(/home/Expand.png)] bg-cover w-full flex justify-start items-start flex-col p-8 py-16">
         <h1 className={'text-7xl w-5/6 font-secondary font-bold mb-4'}>Get the complete <span
           className={'text-primary-foreground'}>Ingenium&lsquo;25</span> guide with all event details, rules and tips.
           Click below to download and start preparing for the ultimate competition.</h1>
