@@ -105,8 +105,8 @@ export default function Home() {
       {/* Mid section */}
       <div className="bg-background w-full flex justify-between items-stretch p-8">
         <div className="w-1/2 flex flex-row justify-end gap-12 px-16 ">
-          <img src={"/home/Pic 1.png"} className={'w-5/12 h-auto rounded-3xl'}/>
-          <img src={"/home/Pic 2.png"} className={'w-5/12 h-auto rounded-3xl'}/>
+          <img src={"/home/Pic-1.png"} className={'w-5/12 h-auto rounded-3xl'}/>
+          <img src={"/home/Pic-2.png"} className={'w-5/12 h-auto rounded-3xl'}/>
         </div>
         <div className="w-1/2 flex flex-row justify-center items-center gap-8">
           <h1 className="text-3xl">
